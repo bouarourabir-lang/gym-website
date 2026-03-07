@@ -18,9 +18,17 @@
         <li> <a href="contact.html"> Contact</a></li>
      </ul>
   </nav>
-<section>
-   <h2>Contact Us</h2> 
-   <h3>We’re here to help you!</h3>
+  <!--**********************************************************************************************************************************************-->
+ </header>
+ <!--header ta3 la page-->
+ <header> 
+    <h2>Contact Us</h2> 
+    <h3>We’re here to help you!</h3>
+ </header>
+ <!--**********************************************************************************************************************************************-->
+ <!--main ta3 la page-->
+  <main>
+   <section> <!--section bah yda5l user info ta3o-->
     <form method="post">
         <fieldset>
             <legend> <h4>Contact Form</h4></legend>
@@ -50,11 +58,13 @@
             <p><label for="text">Message textarea:</label></p>
             <textarea name="Message textarea" id="text" rows="4" cols="30" required></textarea>
         </div>
-        <button type="submit">send</button>
+        <button type="submit" >send</button>
+        <button type="reset" >reset</button>
 </fieldset>
     </form>
 </section>
-<section>
+<!--**********************************************************************************************************************************************-->
+<section> <!--section li fiha lma3lomat ta3 la salle -->
     <fieldset>
         <legend><h4>Gym Info</h4></legend>
         <address>
@@ -65,19 +75,24 @@
         </address>
     </fieldset>
 </section>
-<section>
+<!--**********************************************************************************************************************************************-->
+<section> <!--section fiha phoo ta3 location ta3na-->
     <h2>Our Location</h2>
-    <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\Gemini_Generated_Image_eqkn0weqkn0weqkn.png" alt="AbiNare Location" height="400">
+    <img title="@ AbiNare Location" src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\Gemini_Generated_Image_eqkn0weqkn0weqkn.png" alt="AbiNare Location" height="400">
 </section>
-<section>
+<!--**********************************************************************************************************************************************-->
+<section> <!-- section ta3 table ta3 opening hours-->
     <h2>Opening hours</h2>
     <table>
-        <tr>
-            <th>Days</th>
-            <th>Hours</th>
-            <th>Gender</th>
-        </tr>
-        <tr>
+        <thead>
+             <tr>
+             <th>Days</th>
+             <th>Hours</th>
+             <th>Gender</th>
+            </tr>
+        </thead>
+       <tbody>
+         <tr>
             <td>Sunday</td>
             <td>8:00 AM _ 12:00 AM <br>
                 13:30 AM _ 10:00 PM
@@ -141,8 +156,11 @@
             <td>Female <br>
                 Male
             </td>
+       </tbody>
+       
     </table>
 </section>
+</main>
 <footer>
     <div>
         <h5>Quick Links</h5>
