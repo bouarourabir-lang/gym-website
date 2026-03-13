@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title></title>
+       <link rel="stylesheet" href="home.css">    
+    </head>
+<body class="admin">
+        <h1 >Product / Plan managment</h1>
+        <section class="plan-man"> 
+        <h2 id="pl">Existing plans</h2>
+        <table>
+            <tr>
+                <th>Plans Name</th>
+                <th> Price(DA)</th>
+                <th>Duration</th>
+                <th>Features</th>
+                <th>Action</th>
+            </tr>
+
+             <tr>
+                <td>Gold</td>
+                <td>20000da</td>
+                <td>Annual</td>
+                <td>
+                    <ul>
+                        <li>Full and unlimited access</li>
+                        <li>Vip services</li>
+                        <li>Persnal training services</li>
+                        <li>Use of relaxation facilities</li>
+                    </ul>
+                </td>
+                <td>
+                    <button type="button">Edit</button>
+                    <button type="button">Delete</button>
+                </td>
+             </tr>
+
+              <tr>
+                <td >Silver</td>
+                <td>7500da</td>
+                <td>Quarterly</td>
+                <td>
+                    <ul>
+                        <li>access to basic equipment</li>
+                        <li>training classes</li>
+                        <li>limited flexibility</li>
+                        <li>Special programs for specific groups </li>
+                    </ul>
+                </td>
+                <td>
+                    <button type="button">Edit</button>
+                    <button type="button">Delete</button>
+                </td>
+              </tr>
+
+               <tr>
+                <td>Bronze</td>
+                <td>1500da</td>
+                <td>Monthly</td>
+                <td>
+                    <ul>
+                        <li>Single branch only</li>
+                        <li>Limited access</li>
+                        <li>Lack of additional services</li>
+                        <li>Useof basic equipement</li>
+                    </ul>
+                </td>
+                <td>
+                    <button type="button">Edit</button>
+                    <button type="button">Delete</button>
+                </td>
+               </tr>
+         
+        </table>
+        </section>
+        <br><br><br><br>
+        <section class="planform">
+        <h2 id="newplan">Add new plan</h2>
+        <form>
+            <fieldset classe="field">
+            <label for="name">Plan name</label><br>
+            <input type="text" name="Plan name"><br><br>
+            <label for="price">Price</label><br>
+            <input type ="number" name="Price"><br><br>
+            <label for="duration">Duration</label><br>
+            <input type="text"name="Duration"><br><br>
+            <label for="Features">Features</label><br>
+            <textarea name="Features"></textarea><br><br>
+            <button for="addbuton" type="submit">Add Plan</button>
+            </fieldset>
+        </form>
+    </section>
+    </body>
+</html>

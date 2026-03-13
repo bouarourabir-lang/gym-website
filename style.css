@@ -1,19 +1,25 @@
 body {
-    background-color: #232946;
-    color: rgb(254, 255, 242);
+    background-color: #f0efe8;
+    color: #000;
 }
 body::selection{
   background-color: #b8c1ec;
   color: #000;
 }
 
+
 .Links{
-  background :rgba(159, 6, 159, 0.438);
-  display: flex;
-  list-style: none;
-  flex-flow: row wrap;
-  justify-content: center , ;
-  justify-content: space-evenly;
+    background-color:#340563;
+    padding: 15px 30px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+    width: 100%;
+    border-bottom: 3px solid #c9a227;
+    display: flex;
+    list-style: none;
+    flex-flow: row wrap;
+    justify-content: center ;
+    justify-content: space-evenly;
+    color: #f0efe8;
 }
 .wom {
   display: flex;
@@ -71,11 +77,11 @@ body::selection{
   border-color: #decc28;
   box-shadow: 0 4px 10px yellow;
 }
-ul {
+#trainer {
   list-style: none; 
 }
 
-ul li::before {
+#trainer li::before {
   content: "◆";
   color: #f5c518;
   margin-right: 8px;

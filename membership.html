@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>abinare-membership</title>
+ <link rel="stylesheet" href="home.css">
+
+</head>
+         
+<body>
+  <!--navigation bar-->
+        <nav class="navigation-bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="membership.html">Member ship</a></li>
+                <li><a href="Classes.html">Classes</a></li>
+                <li><a href="trainer.html">Trainer</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+   <h1>Our membership plan</h1>
+   <!--member ship cards-->
+   <section class="membership">
+      <div class="gold">
+        <h3>Gold plan(annual)<br>20000da</h3>
+        <ul class="propr_gold">
+          <li>Full and unlimited access</li>
+          <li>Vip services</li>
+          <li>Persnal training services</li>
+          <li>Use of relaxation facilities</li>
+        </ul>
+      </div>
+      <div class="silver">
+        <h3>Silver plan(Quarterly)<br>7500da</h3>
+        <ul class="prop_silver">
+          <li>access to basic equipment</li>
+          <li>training classes</li>
+          <li>limited flexibility</li>
+          <li>Special programs for specific groups</li>
+        </ul>
+      </div>
+      <div class="bronze">
+        <h3>Bronze plan<br>2000da</h3>
+       
+        <ul class="prop_bronze">
+          <li>Single branch only</li>
+          <li>Limited access</li>
+          <li>Lack of additional services</li>
+          <li>>Use of basic equipement</li>
+        </ul>
+      </div>
+    </section>
+   <section class="register">
+    <fieldset>
+    <h2>Register now</h2>
+    <fieldset class="information">
+        <legend>Personal Information </legend>
+        <label for="full name">Full name</label>
+        <input type="text" name="Full name"><br><br>
+        <label for="email">email</label>
+        <input type="email" name="email"><br><br>
+        <label for="Phone number">Phone number</label>
+        <input type="tel" name="Phone number"><br><br>
+        <label for="dob">Date of birth</label>
+        <input type="date" id="dob" name="dob">
+      </fieldset><br>
+      <fieldset>
+       <legend>Select a plan</legend>
+       <div class="shoosing_a_plan">
+                <label><input type="radio" name="plan" value="bronze" required> Bronze</label>
+                <label><input type="radio" name="plan" value="silver"> Silver</label>
+                <label><input type="radio" name="plan" value="gold"> Gold</label>
+            </div>
+      </fieldset>
+    <fieldset>
+      <legend>Additional information</legend>
+      <label for="Feedback">Feedback</label><br>
+      <textarea id="Feedback"name="Feedback"rows=5 cols="25"></textarea>
+      </fieldset>
+      <br>
+      <div >
+            <input type="checkbox" required>
+            <label>I agree to the terms and conditions</label>
+        </div>
+      </fieldset>
+          <fieldset>
+            <button type="submit">Register</button>
+          </fieldset>
+      <fieldset>
+        <legend>Payment  method</legend>
+        <div class="radio-group">
+<label><input type="radio" name="payment" value="card" onclick="showPayment('card')" required> Credit Card</label>
+<label><input type="radio" name="payment" value="ccp" onclick="showPayment('ccp')"> CCP</label>
+<label><input type="radio" name="payment" value="cash" onclick="showPayment('cash')"> Cash (Pay at Gym)</label>
+</div>
+<div id="card" class="payment">
+<label>Card Number</label>
+<input type="text" placeholder="XXXX XXXX XXXX XXXX">
+
+<label>Expiry Date</label>
+<input type="month">
+
+<label>CVV</label>
+<input type="text" placeholder="123">
+</div>
+<div id="ccp" class="payment">
+<label>CCP Account Number</label>
+<input type="text" placeholder="Enter CCP number">
+</div>
+
+<!-- CASH -->
+<div id="cash" class="payment">
+<p>You will pay in cash at the gym reception desk.</p>
+</div>
+</fieldset>
+</section>
+</body>
+</html>
