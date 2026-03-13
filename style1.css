@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bitcount+Prop+Double:wght@100..900&family=Faster+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Faster+One&family=Story+Script&display=swap');
+body{
+    background-color: #232946;
+    color: #fffffe;
+}
+.center{
+    
+    background-color: #b8c1ec;
+    color: #232946;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+      height: 600px; 
+      margin-top: 100px;
+      margin-bottom: 100px;  
+      margin-left: 400px;
+      margin-right: 400px;
+      width:450px; 
+      border: #232946;
+      border-radius: 5%;
+}
+#imoji{
+    font-size: 35px;
+    border: 1px solid #ffd700;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;     
+    transform: translateY(100px) ;
+    border-radius: 25%;
+    background-color: #ffd90067;
+    margin-left: auto;
+    margin-right: auto;
+}
+#title{
+    transform: translateY(65px); /*habato llta7t*/
+    display: flex;
+    justify-content: center;
+   font-family: "Faster One", system-ui;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 50px;
+}
+#subtitle{
+    transform: translateY(60px); /*habto llta7t*/
+   font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.input{
+    border: #b8c1ec;
+    width: 200px;
+    transform: translate(-30px , -200px) scale(1.38) ;
+    font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+input{
+  width: 230px;
+  height: 30px;
+  border:1px solid #232946;
+  border-radius:5px ;
+  margin: 10px;
+  background-color: #232946;
+  color: #d4dbfc
+}
+input:focus {
+      box-shadow: 0 24px 60px rgba(0,0,0,.5);
+}
+.submit{
+    background-color: #ffd700;
+    color: #232946;
+    border: 1px solid #ffd700;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 250px;
+    height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#back{
+    border: 2px solid #ffd700 ;
+    background-color: #ffd700;
+    color: #232946;
+    text-decoration: none;
+    font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 250px;
+    height: 25px;
+    text-align: center;
+    border-radius: 5px;
+    transform: translateY(-110px);
+}
+fieldset{
+
+    margin-top: 300px;
+}

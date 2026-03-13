@@ -2,6 +2,10 @@ body {
     background-color: #232946;
     color: rgb(254, 255, 242);
 }
+body::selection{
+  background-color: #b8c1ec;
+  color: #000;
+}
 
 .Links{
   background :rgba(159, 6, 159, 0.438);

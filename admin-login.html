@@ -4,29 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name ="description" content="Transform your body and mind with our dynamic gym programs, experienced trainers, and state-of-the-art facilities">
+    <link rel="stylesheet" href="style1.css">
     <title>Admin Login</title>
 </head>
 <body>
+    <div class="center">
     <header>
-        <h1>Admin Login</h1>
-        <h3>Enter your information to access Dashboard space</h3>
+        <div id="imoji">🔐</div>
+        <h1 id="title"> Admin Login</h1>
+        <h3 id="subtitle">Enter your information to access Dashboard space</h3>
     </header>
-    <fieldset>
+    
+    <fieldset class="input">
         <form>
             <div>
                 <label for="user">User Name :</label>
-                <input type="text" id="uesr" placeholder="enter your user name" >
+                <input type="text" id="uesr" placeholder="👤 enter user name" >
             </div>
              <div>
                  <label for="pass">Password :</label>
-                <input type="password" id="pass" placeholder="enter your password">
+                <input type="password" id="pass" placeholder="🔐enter password">
              </div>
              <div>
-                <button type="submit">Login</button>
-                <a href="#">forgot password?</a>
+                <button type="submit" class="submit">Login →</button>
+                <a href="#" >forgot password?</a>
              </div>  
         </form>
     </fieldset>
-    <a href="index.html">Back to Site</a>
+    <a href="index.html" id="back">→ Back to Site</a>
+    </div>
+    
 </body>
 </html>
