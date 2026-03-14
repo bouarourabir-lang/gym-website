@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style1.css">
     <title>Admin Login</title>
 </head>
-<body>
+<body class="page1">
     <div class="center">
     <header>
         <div id="imoji">🔐</div>
@@ -19,14 +19,14 @@
         <form>
             <div>
                 <label for="user">User Name :</label>
-                <input type="text" id="uesr" placeholder="👤 enter user name" >
+                <input type="text" id="uesr" placeholder="👤 enter user name" required>
             </div>
              <div>
                  <label for="pass">Password :</label>
-                <input type="password" id="pass" placeholder="🔐enter password">
+                <input type="password" id="pass" placeholder="🔐enter password" required>
              </div>
              <div>
-                <button type="submit" class="submit">Login →</button>
+                <button type="submit" class="submit"><a href="admin-dashboard.html">Login →</a></button>
                 <a href="#" >forgot password?</a>
              </div>  
         </form>

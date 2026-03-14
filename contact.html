@@ -12,39 +12,44 @@
     <!--navigations-->
  <header>
     <nav>
-     <ul>
-        <li> <a href="index.html">Home</a></li>
-        <li> <a href="classes.html"> Classes</a></li>
-        <li> <a href="membership.html"> Membership</a></li>
-        <li> <a href="trainers.html"> Trainers</a></li>
-        <li> <a href="contact.html"> Contact</a></li>
+     <ul class="Links"> 
+            <li> <a href="index.html" id="access">Home</a> </li>
+            <li> <a href="membership.html" id="access">Membership</a> </li>
+            <li> <a href="Classes.html" id="access">Classes</a> </li>
+            <li> <a href="trainers.html" id="access">Trainer</a> </li>
+            <li> <a href="contact.html" id="access">Contact</a> </li>
      </ul>
   </nav>
-  <!--**********************************************************************************************************************************************-->
- </header>
- <!--header ta3 la page-->
- <header> 
-    <h2>Contact Us</h2> 
-    <h3>We’re here to help you!</h3>
+</header>
+<!--header ta3 la page-->
+ <header class="head"> 
+    <h2 id="cont">🏋️ Contact <span>Us</span> 🏋️</h2> 
+    <h3 id="activity">We’re here to help you!</h3>
+    <div class="line"></div>
  </header>
  <!--**********************************************************************************************************************************************-->
  <!--main ta3 la page-->
   <main>
-   <section> <!--section bah yda5l user info ta3o-->
+    <div class="grid">
+   <section class="info"> <!--section bah yda5l user info ta3o-->
     <form method="post">
         <fieldset>
-            <legend> <h4>Contact Form</h4></legend>
-        <div>
+            <div class="card">
+                <div class="icon">✉️</div>
+                <legend> <h4>Send a Message</h4></legend>
+            </div>
+          <div class="div">
+            <div>
            <label for="Fname">First Name:</label>
-           <input type="text" id="Fname" required> 
+           <input type="text" id="Fname" required placeholder="e.g ABIR"> 
         </div>
         <div>
            <label for="Lname">Last Name:</label>
-           <input type="text" id="Lname" required>
+           <input type="text" id="Lname" required placeholder="e.g Boudraa">
         </div>
         <div>
             <label for="tl">Telephone Number:</label>
-            <input type="tel" id="tl" required>
+            <input type="tel" id="tl" required placeholder="05XXXXXXXX">
         </div>
         <div>
             <label for="sub">Subject:</label>
@@ -56,35 +61,67 @@
                 <option value="Other">other</option>
             </select>
         </div>
-        <div>
-            <p><label for="text">Message textarea:</label></p>
-            <textarea name="Message textarea" id="text" rows="4" cols="30" required></textarea>
+        <div class="textarea">
+            <label for="text">Message textarea:</label>
+            <textarea name="Message textarea" id="text" rows="4" cols="30" required placeholder="Write your message here..."></textarea>
         </div>
-        <button type="submit" >send</button>
-        <button type="reset" >reset</button>
+        <button type="submit" id="send">send</button>
+        <button type="reset" id="reset">reset</button>
+        </div>  
+        
 </fieldset>
     </form>
 </section>
 <!--**********************************************************************************************************************************************-->
-<section> <!--section li fiha lma3lomat ta3 la salle -->
+
+<section class="salle"> <!--section li fiha lma3lomat ta3 la salle -->
     <fieldset>
-        <legend><h4>Gym Info</h4></legend>
+        <div class="card">
+            <div class="icon">🏋️</div>
+            <legend><h4>Gym Information</h4></legend>
+        </div>
+        
         <address>
-           <p><b>Gym Name:</b> AbiNare Fitness</p> 
-           <p><b>Address:</b>Constantie , Ali mendjeli , City AL-istiklal</p> 
-           <p><b>Telephone Number:</b>0549374583 / 044367277</p> 
-           <p> <b>Email:</b> <a href="#">AbiNare_2006 @ gmail.com</a> </p>
+           <div class="add">🏷️</div>
+           <div class="info">
+            <b id="shift2"> Gym Name:</b>
+            <p> AbiNare Fitness</p> 
+           </div>
+           
+           <hr>
+
+           <div class="add">📍</div>
+           <div class="info">
+            <b id="shift2">Address:</b>
+            <p> <a href="#location" id="loc">Constantie , Ali mendjeli , city AL-Istiklal </a> </p> 
+           </div>
+           
+           <hr>
+           <div class="add">📞</div>
+           <div class="info">
+            <b id="shift2"> Telephone Number:</b>
+            <p> 0549374583 / 044367277</p> 
+           </div>
+           
+           <hr>
+           <div class="add">✉️</div>
+           <div class="info">
+            <b id="shift2"> Email:</b>
+            <p> <a href="#" id="email">AbiNare_2006 @ gmail.com</a> </p>
+           </div>
+           
         </address>
     </fieldset>
 </section>
+</div>
 <!--**********************************************************************************************************************************************-->
-<section> <!--section fiha phoo ta3 location ta3na-->
-    <h2>Our Location</h2>
+<section id="location"> <!--section fiha phoo ta3 location ta3na-->
+    <h2>📍 Our Location 📍</h2>
     <img title="@ AbiNare Location" src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\Gemini_Generated_Image_eqkn0weqkn0weqkn.png" alt="AbiNare Location" height="400">
 </section>
 <!--**********************************************************************************************************************************************-->
 <section> <!-- section ta3 table ta3 opening hours-->
-    <h2>Opening hours</h2>
+    <h2 style="text-align: center;">🕛 Opening hours 🕛</h2>
     <table>
         <thead>
              <tr>
@@ -150,7 +187,8 @@
             </td>
             <td>Male</td>
         </tr>
-        <td>Saturday</td>
+        <tr>
+            <td>Saturday</td>
             <td>
                 7:00 AM _ 16:00 AM <br>
                 17:30 AM _ 10:00 PM
@@ -158,28 +196,59 @@
             <td>Female <br>
                 Male
             </td>
+        </tr>
+        
        </tbody>
        
     </table>
 </section>
 </main>
-<footer>
-    <div>
-        <h5>Quick Links</h5>
-        <a href="index.html">Home</a>
-        <a href="classes.html"> Classes</a>
-       <a href="membership.html"> Membership</a>
-        <a href="trainers.html"> Trainers</a>
-        <a href="contact.html"> Contact</a>
-    </div>
-    <div>
-        <h5>Contact information</h5>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">TikTok</a>
-        <p>address : Constantie , Ali mendjeli , City AL-istiklal</p>
-        <p>Telephone Number: 0549374583 / 044367277</p>
-    </div>
-</footer>
+<footer class="footer-h">
+        <div class="footer-g"> 
+            <div class="footer-logo">
+                    <img src="c:\Users\pc\Downloads\logo Mar 7, 2026, 10_43_52 AM.png">
+                    <p class="footer-des">nnnnnnnnnnnnnnnnnnnn</p>
+            </div>
+            <div class="footer-contact">
+                <h4 class="f-contact-t">contact</h4>
+                   <div class="contact-it">
+                <img src="c:\Users\pc\Downloads\adressmail.png" alt="email email icon">
+                <a href="mailto:Abinare-fitness@gmail.com">Abinare-fitness@gmail.com</a>               
+                   </div>
+                   <div class="contact-it">
+                    <img src="c:\Users\pc\Downloads\icon_transparent_1.png" alt="phone icon">
+                    <a href="mailto:+213745634">+213745634</a>
+                   </div>
+                    <div>
+                    <img src="c:\Users\pc\Downloads\icon_transparent_2.png"alt="phone icon">
+                    <span href="mailto:nouvelle ville ali mendjli extention 20 ">nouvelle ville ali mendjli extention 20</span>
+                    </div>
+                </div>
+                <div class="f-oppenin-h">
+                      <span><b>Openning hours</b></span>
+                <ul>
+                    <li>Sunday-thuesday:06:00AM-10:00PM</li>
+                    <li>Saturday:08:00AM-08:00PM</li>
+                    <li>Friday:</li>
+                    <ul>
+                        <li>Mornin:06:00-11:00</li>
+                        <li>Evening:15:00-20:00</li>
+                    </ul>
+                </ul>
+             </div>
+             <hr>
+             <h3>Follow us</h3>
+             <div class="footer-social">
+                <a href="http://facebook.com " target="_blank">
+                    <img src="c:\Users\pc\Downloads\photo_5877477992722795657_y.jpg"alt="facebook">
+                </a>
+                <a href="http://Instagram.com " target="_blank">
+                    <img src="c:\Users\pc\Downloads\photo_5864228418046594555_x.jpg"alt="instagram">
+                </a>
+                <a href="http://wa.me " target="_blank">
+                    <img src="c:\Users\pc\Downloads\photo_5877477992722795657_y.jpg">
+                </a>
+             </div>
+    </footer>
 </body>
 </html>

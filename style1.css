@@ -1,13 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bitcount+Prop+Double:wght@100..900&family=Faster+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Faster+One&family=Story+Script&display=swap');
-body{
-    background-color: #232946;
+
+body.page1 {
+    background-color: #2a0050;;
     color: #fffffe;
 }
+body.page2 {
+    background-color: #f0efe8;
+    color: #2a0050;
+    margin: 0px;
+    padding: 0px;
+}
+body::selection{
+  background-color: #b8c1ec;
+  color: #000;
+}
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+#access{
+  color: #ece7ef;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.Links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 15px 30px;
+  background-color: #2a0050;
+  list-style: none;
+  transform: translateY(-15px);
+  border-bottom: 4px solid #c9a227;
+  height: 49px;
+  width: 100%;
+}
+
+#access:hover{
+  color: #c9a227;
+}
+span{
+  color:#c9a227
+}
+.head{
+ height: 180px;
+ width: 100%;
+ background-color: #2a0050;
+ color: #ece7ef;
+ transform: translateY(-36px);
+ text-align: center;
+}
+#Meet{
+  font-family: "Faster One", system-ui;
+  font-weight:400;
+  font-style: normal;
+}
+#activity{
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+span{
+  color:#c9a227
+}
+.head{
+ height: 180px;
+ width: 100%;
+ background-color: #2a0050;
+ color: #ece7ef;
+ transform: translateY(-36px);
+}
+
+.line{
+  width: 60px;
+  height: 3px;
+  background: #c9a227;
+  margin: 28px auto 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .center{
     
-    background-color: #b8c1ec;
-    color: #232946;
+    background-color: #f0efe8;
+    color: #2a0050;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +110,7 @@ body{
       margin-left: 400px;
       margin-right: 400px;
       width:450px; 
-      border: #232946;
+      border: #2a0050;
       border-radius: 5%;
 }
 #imoji{
@@ -31,6 +123,20 @@ body{
     transform: translateY(100px) ;
     border-radius: 25%;
     background-color: #ffd90067;
+    margin-left: auto;
+    margin-right: auto;
+}
+#imoji2{
+    font-size: 30px;
+    border: 1px solid #2a0050;
+    width: 10px;
+    height: 8px;
+    align-items: center;
+    display: flex;
+    justify-content: center;     
+    transform: translateY(-10px) ;
+    border-radius: 25%;
+    background-color: #2b005066;
     margin-left: auto;
     margin-right: auto;
 }
@@ -50,7 +156,7 @@ body{
   font-style: normal;
 }
 .input{
-    border: #b8c1ec;
+    border: #f0efe8;
     width: 200px;
     transform: translate(-30px , -200px) scale(1.38) ;
     font-family: "Story Script", sans-serif;
@@ -60,31 +166,33 @@ body{
 input{
   width: 230px;
   height: 30px;
-  border:1px solid #232946;
+  border:1px solid #2a0050;
   border-radius:5px ;
   margin: 10px;
-  background-color: #232946;
-  color: #d4dbfc
+  background-color: #2a0050;
+  color: #f0efe8;
 }
 input:focus {
       box-shadow: 0 24px 60px rgba(0,0,0,.5);
 }
 .submit{
     background-color: #ffd700;
-    color: #232946;
+    color: #2a0050;
     border: 1px solid #ffd700;
     border-radius: 5px;
     cursor: pointer;
-    width: 250px;
+    width: 260px;
     height: 25px;
     margin-left: auto;
     margin-right: auto;
-
+}
+.submit a{
+    text-decoration: none;
 }
 #back{
     border: 2px solid #ffd700 ;
     background-color: #ffd700;
-    color: #232946;
+    color: #2a0050;
     text-decoration: none;
     font-family: "Story Script", sans-serif;
   font-weight: 400;
@@ -96,6 +204,86 @@ input:focus {
     transform: translateY(-110px);
 }
 fieldset{
-
     margin-top: 300px;
+}
+
+
+table{
+    width:70%;
+    margin: 30px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    border-collapse: separate;
+    overflow: hidden;
+    box-shadow: 0 4px 10px;
+    color:rgba(0,0,0,0,1);
+}
+th{
+    background-color: #ffda03;
+    color: #3c096c;
+    padding: 12px;
+    font-size: 18px;  
+}
+td{
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #7b24d2;
+    color:#3c096c;
+}
+tr:hover {
+   background-color: #f5e6ff;
+}
+ul{
+    text-align: left;
+    padding-left: 20px;
+}
+
+
+.grid{
+     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    align-items: stretch;
+}
+.grid div {
+    border: 2px solid #2a0050;
+    border-radius: 8px ;
+    padding: 24px 22px;
+    
+}
+#div{
+    color: #2a0050;
+    
+}
+
+#members {
+   font-size: 3rem;
+   font-weight: 900;
+    color: #ffd700;
+}
+
+#green{
+  color: green;
+  font-weight: 900;
+}
+
+#Subscriptions{
+   font-size: 3rem;
+   font-weight: 900;
+   color: #8bdcef;
+}
+
+#classes{
+    font-size: 3rem;
+   font-weight: 900;
+   color: #c719be;
+}
+#Revenue{
+    font-size: 3rem;
+   font-weight: 900;
+   color: #ec0f0f;
+   
+}
+h2{
+    text-align: center;
 }

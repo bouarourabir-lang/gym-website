@@ -7,51 +7,74 @@
     <link rel="stylesheet" href="style1.css">
     <title>Admin Dashboard</title>
 </head>
-<body>
+<body class="page2">
 <aside>
   <header>
     <nav>
-        <ul>
-          <li> <a href="index.html">Home</a></li>
-          <li> <a href="classes.html"> Classes</a></li>
-          <li> <a href="membership.html"> Membership</a></li>
-          <li> <a href="trainers.html"> Trainers</a></li>
-          <li> <a href="contact.html"> Contact</a></li>
-        </ul>
-    </nav>
+     <ul class="Links">
+            <li> <a href="index.html" id="access">Home</a> </li>
+            <li> <a href="membership.html" id="access">Membership</a> </li>
+            <li> <a href="Classes.html" id="access">Classes</a> </li>
+            <li> <a href="trainers.html" id="access">Trainer</a> </li>
+            <li> <a href="contact.html" id="access">Contact</a> </li>
+     </ul>
+  </nav>
  </header>
 </aside>
-<header>
-    <h1>Dashboard space</h1>
+<header class="head">
+    <h1  id="Meet">👨‍💼 Dashboard <span>space 👨‍💼</span></h1>
+     <h3 id="activity">Welcome back, Admin! Here’s what’s happening at your gym today</h3>
+     <div class="line"></div>
 </header>
 <main>
-  <section>
-    <h2>Key Metrics</h2>
+  <h2> 📊 General statistics 📊</h2>
+  <section class="grid">
+    
     <div>
-        <strong>1172</strong>
-        <h3>Total Members</h3>
-        <p>+38 This month</p>
+        <span id="div">
+          <div id="imoji2">👥</div>
+          <strong id="members">1172</strong>
+          <h3 >Total Members</h3>
+          <p id="green">▲ +38 This month</p>
+        </span>
     </div>
-    <div>
-        <strong>850</strong>
+    
+      <div>
+        <span id="div">
+          <div id="imoji2">💳</div>
+        <strong id="Subscriptions">850</strong>
         <h3>Active Subscriptions</h3>
-        <p>+12 this week</p>
+        <p id="green">▲ +12 this week</p>
+        </span>
     </div>
-    <div>
-        <strong>7</strong>
+   
+    
+      <div>
+        <span id="div">
+          <div id="imoji2">🏋️</div>
+        <strong id="classes">7</strong>
         <h3>Classes Today</h3>
-        <p>3 morning sessions for Ladies</p>
-        <p>4 evning sessions for Gents</p>
-    </div>
-    <div>
-         <strong>84K</strong>
+        <p id="green">3 morning sessions for Ladies</p>
+        <p id="green">4 evning sessions for Gents</p>
+         </span>
+      </div>
+  
+    
+    
+      <div>
+        <span id="div">
+          <div id="imoji2">💰</div>
+         <strong id="Revenue">84K</strong>
         <h3>Revenue This Month(DA)</h3>
-        <p>+ 15% compared to last month</p>
-    </div>
+        <p id="green"> ▲ +15% compared to last month</p>
+        </span>
+      </div>
+    
+    
   </section>
   <hr>
   <section>
-     <caption><h3>Recent activity</h3> </caption>
+     <caption><h2> 📊 Recent activity 📊</h2> </caption>
      <table>
        <thead>
         <tr>
