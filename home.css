@@ -247,7 +247,7 @@ h1{
     width: 300px;
     border-radius: 20px;
     box-shadow: 0 15px 35px #0000001a;
-    border: 1px solid #666;
+    border:18px 18px 0 0;
     display: flex;
     flex-direction: column;
 }
