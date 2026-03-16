@@ -70,7 +70,8 @@ h1{
 }
 .logo img{
     weight: 800px;
-    height: 800px;
+    height: 500px;
+    color: wheat;
 }
 #slg ,h2{
     text-align: center;
@@ -104,10 +105,13 @@ h1{
  cursor: pointer;
  background:linear-gradient(135deg , #6b21a8 0%, #a855f7 65% ,#a855f7 70% ,#fde68a 75%, #f59e0b 95%, white 100%);
  box-shadow:3px 8px 25px #6b21a866;
+ transform: translateY(-100px);
+ 
 }
-.join-button button:active{
-    transform:scale(0.98) ;
+.join-button a{
+    text-decoration: none;
 }
+
     /*classes-home */
     .facilitatesofabinare ,.membership{
         padding: 50px;
