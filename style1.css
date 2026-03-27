@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Faster+One&family=Story+Script&display=swap');
 
 body.page1 {
-    background-color: #2a0050;;
+    background-color: #3c096c;
     color: #fffffe;
 }
 body.page2 {
     background-color: #f0efe8;
-    color: #2a0050;
+    color: #3c096c;
     margin: 0px;
     padding: 0px;
 }
@@ -34,7 +34,7 @@ html, body {
   align-items: center;
   gap: 60px;
   padding: 15px 30px;
-  background-color: #2a0050;
+  background-color: #3c096c;
   list-style: none;
   transform: translateY(-15px);
   border-bottom: 4px solid #c9a227;
@@ -51,7 +51,7 @@ span{
 .head{
  height: 180px;
  width: 100%;
- background-color: #2a0050;
+ background-color: #3c096c;
  color: #ece7ef;
  transform: translateY(-36px);
  text-align: center;
@@ -73,7 +73,7 @@ span{
 .head{
  height: 180px;
  width: 100%;
- background-color: #2a0050;
+ background-color: #3c096c;
  color: #ece7ef;
  transform: translateY(-36px);
 }
@@ -99,7 +99,7 @@ span{
 .center{
     
     background-color: #f0efe8;
-    color: #2a0050;
+    color: #3c096c;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,7 +110,7 @@ span{
       margin-left: 400px;
       margin-right: 400px;
       width:450px; 
-      border: #2a0050;
+      border: #3c096c;
       border-radius: 5%;
 }
 #imoji{
@@ -128,7 +128,7 @@ span{
 }
 #imoji2{
     font-size: 30px;
-    border: 1px solid #2a0050;
+    border: 1px solid #3c096c;
     width: 10px;
     height: 8px;
     align-items: center;
@@ -166,10 +166,10 @@ span{
 input{
   width: 230px;
   height: 30px;
-  border:1px solid #2a0050;
+  border:1px solid #3c096c;
   border-radius:5px ;
   margin: 10px;
-  background-color: #2a0050;
+  background-color: #3c096c;
   color: #f0efe8;
 }
 input:focus {
@@ -177,7 +177,7 @@ input:focus {
 }
 .submit{
     background-color: #ffd700;
-    color: #2a0050;
+    color: #3c096c;
     border: 1px solid #ffd700;
     border-radius: 5px;
     cursor: pointer;
@@ -192,7 +192,7 @@ input:focus {
 #back{
     border: 2px solid #ffd700 ;
     background-color: #ffd700;
-    color: #2a0050;
+    color: #3c096c;
     text-decoration: none;
     font-family: "Story Script", sans-serif;
   font-weight: 400;
@@ -246,13 +246,13 @@ ul{
     align-items: stretch;
 }
 .grid div {
-    border: 2px solid #2a0050;
+    border: 2px solid #3c096c;
     border-radius: 8px ;
     padding: 24px 22px;
     
 }
 #div{
-    color: #2a0050;
+    color: #3c096c;
     
 }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-<title>abinare-fitness</title>
+<title>abinare-membership</title>
  <link rel="stylesheet" href="home.css">
 
 </head>
@@ -18,7 +18,7 @@
             </ul>
         </nav>
     <header class="head">
-    <h1 id="Meet">🏋️ Our member <span>ship plan</span>  🏋️</h1>
+    <h1 id="Meet">🏋️ Our<span> membership plan</span>  🏋️</h1>
      </header>
    <p id="classes-des">Your body is the only place you will live in forever.Discover our memberships and their properties,choose the one that suits to u and join us to start the journey of change together</p>
    <!--member ship cards-->
@@ -57,15 +57,15 @@
       <fieldset>
         <legend>Personal Information </legend>
         <label>Full name</label>
-        <input type="text" >
+        <input type="text" required placeholder="e.g., Abir Bouarour" maxlength="40">
         <label>email</label>
-        <input type="email">
+        <input type="email" required placeholder="e.g., Boudraanareman@gmail.com">
         <label>Phone number</label>
-        <input type="tel">
+        <input type="tel" required placeholder="05XXXXXXXX" maxlength="10">
         <label>Date of birthday</label>
-        <input type="date">
+        <input type="date" required>
       </fieldset>
-      <fieldset>
+      <fieldset >
         <legend>Select a plan</legend>
          <div>
         <label><input type="radio"> Gold</label>
@@ -75,15 +75,10 @@
       </fieldset>
     <fieldset>
       <legend>Additional information</legend>
-      <textarea id="Feedback"></textarea>
+      <textarea id="Feedback" placeholder="write your information heare ..."></textarea>
       </fieldset>
-        <div >
-            <input type="checkbox">
-            <label>I agree to the conditions</label>
-        </div><br>
-          <div>
-            <button type="submit">Register</button>
-          </div>
+        
+          
       <fieldset>
         <legend>Payment  method</legend>
         <div>
@@ -93,16 +88,24 @@
         </div>
         <div>
           <label>Card Number</label>
-        <input type="text">
+        <input type="text" required placeholder="XXXX XXXX XXXX XXXX">
        </div>
         <div>
           <label>Ccp Account Number</label>
-          <input type="text">
+          <input type="text"required placeholder="XXXXXXXX XX">
         </div>
         <div>
             <p>Payment at the gym</p>
         </div>
       </fieldset>
+      <div >
+            <input type="checkbox" required>
+            <label>I agree to the conditions</label>
+        </div><br>
+      <div>
+            <button type="submit">Register</button>
+          </div>
+
 </form>
 </section>
  <footer  class="footer-h">
