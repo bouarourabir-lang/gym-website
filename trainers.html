@@ -24,10 +24,15 @@
     <h1 id="Meet">🏋️ Meet Our <span>Trainers</span>  🏋️</h1>
     <h3 id="activity">Dedicated professionals committed to your transformation</h3>
     <div class="line"></div>
+    
  </header>
+ <div class="search">
+        <input type="text" id="searchinput" placeholder="Search by name or specialty..." class="searshin">
+    </div>
   <h2 id="shift"><span>Female</span> Trainers</h2>
   <article>
   <section class="wom">
+        <p id="noResult" style="display:none">No trainers found</p>
     <!-- section ta3 nsaa-->
 <article id="bord">
     <figure> <!--trainer ta3 swimming 01-->
@@ -90,6 +95,7 @@
 </article>
  <!--***************************************************************************************************************************************-->
 <article id="bord">
+    <p id="noResult" style="display:none">No trainers found</p>
     <figure> <!--trainer ta3 Boxing 01-->
          <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5859410439698058754_121.jpg" alt="Boxing Trainers" width="200" height="200">
         <figcaption>
@@ -185,8 +191,10 @@
 <article>
     <h2 id="shift"> <span>Male</span> Trainers</h2>
 <section class="men">
+        <p id="noResult" style="display:none">No trainers found</p>
     <!-- section ta3 rajala-->
     <article id="bord">
+        
     <figure> <!--trainer ta3 swimming 01-->
         <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5859410439698058740_121.jpg" alt="swimming trainers" width="200" height="200">
         <figcaption>
@@ -400,5 +408,19 @@ others reach their goals.</h3>
                 </a>
              </div>
     </footer>
+
+        // hada ta3 more details kima natka 3lih y5arjoli hado ma3lomat idafya 
+    <div id="modle" style="display: none;">
+        <div id="box">
+            <button id="close">×</button>
+            <img id="photo" src="" alt="">
+            <h2 id="name"></h2>
+            <p id="specialty"></p>
+            <p id="bio"></p>
+            <p id="schedule"></p>
+        
+        </div>
+    </div>
+    <script src="javaTrainers.js"></script>
 </body>
 </html>
