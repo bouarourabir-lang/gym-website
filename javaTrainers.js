@@ -132,27 +132,27 @@ function getTrainer(card) { //دالة تأخذ بطاقة مدرب واحدة �
   const name = card.querySelector("ul#trainer li:nth-child(1)"); //na9dar n3awdha b "card.querySelector("[data-field='name']")"
   const specialty = card.querySelector("ul#trainer li:nth-child(2)");
   if (!name || !specialty) return { name: "", specialty: "" }; //لو ما لقى أحد العنصرين → يرجع قيم فارغة بدل ما يعطي خطأ
-  const nam = name.textContent.replace("name:", "").trim().toLowerCase(); // example textContent ="name:Bourour Abir" => .replace("name:", "")="Bourour Abir"
-  const spe = specialty.textContent.replace("Specialty:", "").trim().toLowerCase();
+  const nam = name.textContent.trim().toLowerCase(); // example textContent ="name:Bourour Abir" => .replace("name:", "")="Bourour Abir"
+  const spe = specialty.textContent.trim().toLowerCase();
     return { name: nam, specialty: spe }; //يرجع object يحتوي الاسم والتخصص جاهزين للمقارنة مع ما يكتبه المستخدم.
 }
  
 searchInput.addEventListener("input", function () { // ينفّذ الكود كل حرف يكتبه المستخدم
-  const query = this.value.trim().toLowerCase();//ما كتبه المستخدم في حقل البحث
+  const Rvalue = this.value.trim().toLowerCase();//ما كتبه المستخدم في حقل البحث
   const female = document.querySelector("section.wom");//يمسك قسم المدربات 
   const male = document.querySelector("section.men"); //يمسك قسم المدربين 
  
   let femaleco = 0; //عدادان يبدآن من صفر في كل مرة يكتب المستخدم حرفاً، ويحسبان:
   let maleco = 0; //كم بطاقة ظاهرة في قسم النساء/ كم بطاقة ظاهرة في قسم الرجال
  
-  allCards.forEach((card) => {
+  allCards.forEach((card) => { 
     const { name, specialty } = getTrainer(card); //تستدعي الدالة اللي شرحناها قبل وتجيب اسم وتخصص البطاقة الحالية
-    const chek = name.includes(query) || specialty.includes(query); //يتحقق: هل كلمة البحث موجودة في الاسم أو التخصص؟
+    const chek = name.includes(Rvalue) || specialty.includes(Rvalue); //يتحقق: هل كلمة البحث موجودة في الاسم أو التخصص؟
     card.style.display = chek ? "" : "none"; //لو chek = true → يظهر البطاقة (display: "")
                                              //لو chek = false → يخفي البطاقة (display: "none") 
     if (chek) { //فقط لو البطاقة ظاهرة (chek = true):
-      if (female && female.contains(card)) femaleco++; //femaleSection.contains(card) → يسأل: هل هذه البطاقة داخل قسم النساء؟
-      if (male && male.contains(card)) maleco++;
+      if (female) femaleco++; //femaleSection.contains(card) → يسأل: هل هذه البطاقة داخل قسم النساء؟
+      if (male) maleco++;
     }
   });
 
@@ -190,7 +190,6 @@ document.querySelectorAll("a#details").forEach((link, index) => { //querySelecto
     e.preventDefault(); //preventDefault() → يمنع الرابط من التنقل لصفحة أخرى  
                         //لأن الرابط عنده href="#" وبدونها الصفحة ترجع للأعلى
     const trainer = trainers[index]; //يجيب بيانات المدرب من المصفوفة باستخدام نفس رقم index الترتيب 
-    if (!trainer) return;  //لو ما لقى المدرب → يوقف، تأمين ضد الأخطاء hadi 9ader na7iha
     //ملء الـ Modal بالبيانات
     const card = allCards[index];
     const img = card.querySelector("img");
@@ -202,7 +201,6 @@ document.querySelectorAll("a#details").forEach((link, index) => { //querySelecto
     modalSchedule.textContent = "🗓️ Schedule: " + trainer.schedule; //يكتب الجدول الزمني، مثال:
  
     modal.style.display = "flex"; //يظهر الـ Modal عن طريق تغيير display من none إلى flex
-    document.body.style.overflow = "hidden"; //يمنع تمرير الصفحة للأسفل وهو Modal مفتوح، حتى لا تتحرك الخلفية خلفه
   });
 });
 
@@ -224,7 +222,6 @@ document.addEventListener("keydown", function (e) {
  
 function closeModal() {
   modal.style.display = "none";
-  document.body.style.overflow = "";
 }
    
 
