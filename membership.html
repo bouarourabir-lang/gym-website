@@ -1,159 +1,237 @@
 <!DOCTYPE html>
 <html>
-    <head>
-<title>abinare-membership</title>
- <link rel="stylesheet" href="home.css">
-
+<head>
+    <title>abinare-membership</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* ===== Mini-cart ===== */
+        #miniCart {
+            position: sticky;
+            top: 0;
+            background: #4b0082;
+            color: #fff;
+            padding: 10px 50px;
+        }
+        #miniCart button {
+            background: #c9a227;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #000;
+        }
+        /* ===== Select Plan buttons on cards ===== */
+        .gold button, .silver button, .bronze button {
+            display: block;
+            margin-top: 12px;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            background: #f5a623;
+            color: #000;
+            width: 100%;
+        }
+        /* ===== Success modal ===== */
+        #successModal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+        #successModal > div {
+            background: #fff;
+            padding: 40px 56px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
 </head>
-         
+ 
 <body>
-  <!--navigation bar-->
-        <nav class="Links">
-            <ul>
-                <li><a href="index.html" id="access">Home</a></li>
-                <li><a href="membership.html" id="access" class="active">Membership</a></li>
-                <li><a href="Classes.html" id="access">Classes</a></li>
-                <li><a href="trainers.html" id="access">Trainer</a></li>
-                <li><a href="contact.html" id="access">Contact</a></li>
-            </ul>
-        </nav>
+ 
+    <!-- Navigation bar -->
+    <nav class="Links">
+        <ul>
+            <li><a href="index.html" id="access">Home</a></li>
+            <li><a href="membership.html" id="access" class="active">Membership</a></li>
+            <li><a href="Classes.html" id="access">Classes</a></li>
+            <li><a href="trainers.html" id="access">Trainer</a></li>
+            <li><a href="contact.html" id="access">Contact</a></li>
+        </ul>
+    </nav>
+ 
+   
+ 
     <header class="head">
-    <h1 id="Meet">🏋️ Our<span> membership plan</span>  🏋️</h1>
-     </header>
-   <p id="classes-des">Your body is the only place you will live in forever.Discover our memberships and their properties,choose the one that suits to u and join us to start the journey of change together</p>
-   <!--member ship cards-->
-   <section class="membership">
-      <div class="gold">
-        <h3>Gold plan(annual)<br>20000da</h3>
-        <ul>
-          <li>-Full and unlimited access</li>
-          <li>-Vip services</li>
-          <li>-Persnal training services</li>
-          <li>-Use of relaxation facilities</li>
-        </ul>
-      </div>
-      <div class="silver">
-        <h3>Silver plan(Quarterly)<br>7500da</h3>
-        <ul>
-          <li>-access to basic equipment</li>
-          <li>-training classes</li>
-          <li>-limited flexibility</li>
-          <li>-Special programs for specific groups</li>
-        </ul>
-      </div>
-      <div class="bronze">
-        <h3>Bronze plan<br>2000da</h3>
-        <ul>
-          <li>-Single branch only</li>
-          <li>-Limited access</li>
-          <li>-Lack of additional services</li>
-          <li>-Use of basic equipement</li>
-        </ul>
-      </div>
+        <h1 id="Meet">🏋️ Our<span> membership plan</span> 🏋️</h1>
+    </header>
+  <!-- ✅ Mini-cart sticky bar -->
+    <div id="miniCart">
+        <span>No plan selected</span>
+    </div>
+    <p id="classes-des">Your body is the only place you will live in forever. Discover our memberships and their properties, choose the one that suits you and join us to start the journey of change together.</p>
+ 
+    <!-- Membership cards -->
+    <section class="membership">
+        <div class="gold">
+            <h3>Gold plan(annual)<br>20000da</h3>
+            <ul>
+                <li>- Full and unlimited access</li>
+                <li>- Vip services</li>
+                <li>- Personal training services</li>
+                <li>- Use of relaxation facilities</li>
+            </ul>
+            <!-- ✅ زر Select Plan -->
+            <button type="button" onclick="updateCart('Gold plan (annual) - 20000da')">Select Plan</button>
+        </div>
+        <div class="silver">
+            <h3>Silver plan(Quarterly)<br>7500da</h3>
+            <ul>
+                <li>- Access to basic equipment</li>
+                <li>- Training classes</li>
+                <li>- Limited flexibility</li>
+                <li>- Special programs for specific groups</li>
+            </ul>
+            <!-- ✅ زر Select Plan -->
+            <button type="button" onclick="updateCart('Silver plan (Quarterly) - 7500da')">Select Plan</button>
+        </div>
+        <div class="bronze">
+            <h3>Bronze plan<br>2000da</h3>
+            <ul>
+                <li>- Single branch only</li>
+                <li>- Limited access</li>
+                <li>- Lack of additional services</li>
+                <li>- Use of basic equipment</li>
+            </ul>
+            <!-- ✅ زر Select Plan -->
+            <button type="button" onclick="updateCart('Bronze plan - 2000da')">Select Plan</button>
+        </div>
     </section>
-   <section class="register">
-     <form>
-    <h2>Register now</h2>
-      <fieldset>
-        <legend>Personal Information </legend>
-        <label>Full name</label>
-        <input type="text" required placeholder="e.g., Abir Bouarour" maxlength="40">
-        <label>email</label>
-        <input type="email" required placeholder="e.g., Boudraanareman@gmail.com">
-        <label>Phone number</label>
-        <input type="tel" required placeholder="05XXXXXXXX" maxlength="10">
-        <label>Date of birthday</label>
-        <input type="date" required>
-      </fieldset>
-      <fieldset >
-        <legend>Select a plan</legend>
-         <div>
-        <label><input type="radio"> Gold</label>
-        <label><input type="radio"> Silver</label>
-        <label><input type="radio"> Bronze</label>
-          </div>
-      </fieldset>
-    <fieldset>
-      <legend>Additional information</legend>
-      <textarea id="Feedback" placeholder="write your information heare ..."></textarea>
-      </fieldset>
-        
-          
-      <fieldset>
-        <legend>Payment  method</legend>
-        <div>
-           <label ><input type="radio"> Dba</label>
-           <label ><input type="radio"> Ccp</label>
-           <label ><input type="radio"> Cash</label>
-        </div>
-        <div>
-          <label>Card Number</label>
-        <input type="text" required placeholder="XXXX XXXX XXXX XXXX">
-       </div>
-        <div>
-          <label>Ccp Account Number</label>
-          <input type="text"required placeholder="XXXXXXXX XX">
-        </div>
-        <div>
-            <p>Payment at the gym</p>
-        </div>
-      </fieldset>
-      <div >
-            <input type="checkbox" required>
-            <label>I agree to the conditions</label>
-        </div><br>
-      <div>
-            <button type="submit">Register</button>
-          </div>
-
-</form>
-</section>
- <footer  class="footer-h">
-        <div class="footer-g"> 
-            <div class="footer-logo">
-                    <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5888913227184278821_121.jpg">
+ 
+    <!-- Registration form -->
+    <section class="register">
+        <form>
+            <h2>Register now</h2>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label>Full name</label>
+                <input type="text" required placeholder="e.g., Abir Bouarour" maxlength="40">
+                <label>Email</label>
+                <input type="email" required placeholder="e.g., Boudraanareman@gmail.com">
+                <label>Phone number</label>
+                <input type="tel" required placeholder="05XXXXXXXX" maxlength="10">
+                <label>Date of birth</label>
+                <input type="date" required>
+            </fieldset>
+ 
+            <!-- ✅ name="plan" حتى لا يُختار أكثر من خطة -->
+            <fieldset>
+                <legend>Select a plan</legend>
+                <div>
+                    <label><input type="radio" name="plan"> Gold</label>
+                    <label><input type="radio" name="plan"> Silver</label>
+                    <label><input type="radio" name="plan"> Bronze</label>
+                </div>
+            </fieldset>
+ 
+            <fieldset>
+                <legend>Additional information</legend>
+                <textarea id="Feedback" placeholder="write your information here..."></textarea>
+            </fieldset>
+ 
+            <fieldset>
+                <legend>Payment method</legend>
+                <div>
+                    <label><input type="radio" name="payment"> Dba</label>
+                    <label><input type="radio" name="payment"> Ccp</label>
+                    <label><input type="radio" name="payment"> Cash</label>
+                </div>
+                <div>
+                    <label>Card Number</label>
+                    <input type="text" placeholder="XXXX XXXX XXXX XXXX">
+                </div>
+                <div>
+                    <label>Ccp Account Number</label>
+                    <input type="text" placeholder="XXXXXXXX XX">
+                </div>
+                <div>
+                    <p>Payment at the gym</p>
+                </div>
+            </fieldset>
+ 
+            <div>
+                <input type="checkbox" required>
+                <label>I agree to the conditions</label>
+            </div><br>
+ 
+            <div>
+                <button type="submit">Register</button>
             </div>
-                     <div class="footer-contact">
-                         <h3>contact</h3>
-                   <div class="contact-it">
-                <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5884361072951627106_121.jpg" alt="email icon">
-                <a href="mailto:Abinare-fitness@gmail.com">Abinare-fitness@gmail.com</a>               
-                   </div>
-                   <div class="contact-it">
+        </form>
+    </section>
+ 
+    <!-- ✅ Success modal -->
+    <div id="successModal">
+        <div>✅ Registration successful! Welcome to Abinare!</div>
+    </div>
+ 
+    <footer class="footer-h">
+        <div class="footer-g">
+            <div class="footer-logo">
+                <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5888913227184278821_121.jpg">
+            </div>
+            <div class="footer-contact">
+                <h3>contact</h3>
+                <div class="contact-it">
+                    <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5884361072951627106_121.jpg" alt="email icon">
+                    <a href="mailto:Abinare-fitness@gmail.com">Abinare-fitness@gmail.com</a>
+                </div>
+                <div class="contact-it">
                     <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5864228418046594525_121.jpg" alt="phone icon">
                     <a href="tel:+213745634">+213745634</a>
-                   </div>
-                    <div  class="contact-it">
-                    <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5888913227184278807_121.jpg"alt="address icon">
-                    <span>nouvelle ville </span>
-                    </div>
+                </div>
+                <div class="contact-it">
+                    <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5888913227184278807_121.jpg" alt="address icon">
+                    <span>nouvelle ville</span>
+                </div>
             </div>
             <div class="f-oppenin-h">
-                 <h3>Oppening hours</h3>
+                <h3>Oppening hours</h3>
                 <ul>
-                    <li>Sunday-thuesday:06:00AM-10:00PM</li>
-                    <li>Saturday:08:00AM-08:00PM</li>
+                    <li>Sunday-thuesday: 06:00AM - 10:00PM</li>
+                    <li>Saturday: 08:00AM - 08:00PM</li>
                     <li>Friday:</li>
                     <ul>
-                        <li>Morning:06:00-11:00</li>
-                        <li>Evening:15:00-20:00</li>
+                        <li>Morning: 06:00 - 11:00</li>
+                        <li>Evening: 15:00 - 20:00</li>
                     </ul>
                 </ul>
-             </div>
+            </div>
         </div>
-             <hr>
-             <h3>Follow us</h3>
-             <div class="footer-social">
-                <a href="http://facebook.com "target="_blank">
-                    <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5884361072951627110_120.jpg"alt="facebook">
-                </a>
-                <a href="http://Instagram.com "target="_blank">
-                    <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5888913227184278806_121.jpg"alt="instagram">
-                </a>
-                <a href="http://wa.me " target="_blank">
-                    <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5884361072951627112_121.jpg"alt="whatsapp">
-                </a>
-             </div>
+        <hr>
+        <h3>Follow us</h3>
+        <div class="footer-social">
+            <a href="http://facebook.com" target="_blank">
+                <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5884361072951627110_120.jpg" alt="facebook">
+            </a>
+            <a href="http://Instagram.com" target="_blank">
+                <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5888913227184278806_121.jpg" alt="instagram">
+            </a>
+            <a href="http://wa.me" target="_blank">
+                <img src="c:\Users\Far DigiTech\OneDrive\Dokumenter\photo\5884361072951627112_121.jpg" alt="whatsapp">
+            </a>
+        </div>
     </footer>
+ 
+    <script src="membership.js"></script>
 </body>
 </html>
+ 
