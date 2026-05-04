@@ -1,4 +1,3 @@
-/* 7atinahoum fi araay*/
 const trainers = [
   // ===== Female Trainers =====
   {
@@ -123,47 +122,42 @@ const trainers = [
     schedule: "Wednesday & Friday 5:00PM"
   }
 ];
-  /*============================================================================================*/
-// ===== Search Functionality =====
-const searchInput = document.getElementById("searchinput");
-const allCards = document.querySelectorAll("article[id='bord']"); // هذا CSS Selector يعني: اختر كل عنصر <article> الذي عنده id="bord"
+let searchInput = document.getElementById("searchinput");
+let allCards = document.querySelectorAll("article[id='bord']"); 
 
-function getTrainer(card) { //دالة تأخذ بطاقة مدرب واحدة كمعامل، وترجع اسمه وتخصصه.
-  const name = card.querySelector("ul#trainer li:nth-child(1)"); //na9dar n3awdha b "card.querySelector("[data-field='name']")"
+function getTrainer(card) {
+  const name = card.querySelector("ul#trainer li:nth-child(1)"); 
   const specialty = card.querySelector("ul#trainer li:nth-child(2)");
-  if (!name || !specialty) return { name: "", specialty: "" }; //لو ما لقى أحد العنصرين → يرجع قيم فارغة بدل ما يعطي خطأ
-  const nam = name.textContent.trim().toLowerCase(); // example textContent ="name:Bourour Abir" => .replace("name:", "")="Bourour Abir"
+  if (!name || !specialty) return { name: "", specialty: "" }; 
+  const nam = name.textContent.trim().toLowerCase(); 
   const spe = specialty.textContent.trim().toLowerCase();
-    return { name: nam, specialty: spe }; //يرجع object يحتوي الاسم والتخصص جاهزين للمقارنة مع ما يكتبه المستخدم.
+    return { name: nam, specialty: spe }; 
 }
  
-searchInput.addEventListener("input", function () { // ينفّذ الكود كل حرف يكتبه المستخدم
-  const Rvalue = this.value.trim().toLowerCase();//ما كتبه المستخدم في حقل البحث
-  const female = document.querySelector("section.wom");//يمسك قسم المدربات 
-  const male = document.querySelector("section.men"); //يمسك قسم المدربين 
+searchInput.addEventListener("input", function () { 
+  const Rvalue = this.value.trim().toLowerCase();
+  const female = document.querySelector("section.wom");
+  const male = document.querySelector("section.men"); 
  
-  let femaleco = 0; //عدادان يبدآن من صفر في كل مرة يكتب المستخدم حرفاً، ويحسبان:
-  let maleco = 0; //كم بطاقة ظاهرة في قسم النساء/ كم بطاقة ظاهرة في قسم الرجال
+  let femaleco = 0; 
+  let maleco = 0;
  
   allCards.forEach((card) => { 
-    const { name, specialty } = getTrainer(card); //تستدعي الدالة اللي شرحناها قبل وتجيب اسم وتخصص البطاقة الحالية
-    const chek = name.includes(Rvalue) || specialty.includes(Rvalue); //يتحقق: هل كلمة البحث موجودة في الاسم أو التخصص؟
-    card.style.display = chek ? "" : "none"; //لو chek = true → يظهر البطاقة (display: "")
-                                             //لو chek = false → يخفي البطاقة (display: "none") 
-    if (chek) { //فقط لو البطاقة ظاهرة (chek = true):
-      if (female) femaleco++; //femaleSection.contains(card) → يسأل: هل هذه البطاقة داخل قسم النساء؟
+    const { name, specialty } = getTrainer(card); 
+    const chek = name.includes(Rvalue) || specialty.includes(Rvalue); 
+    card.style.display = chek ? "" : "none"; 
+
+    if (chek) { 
+      if (female) femaleco++;
       if (male) maleco++;
     }
   });
 
-  const femaleR = document.querySelector("section.wom #noResult"); //يبحث مباشرة عن #noResult الموجود داخل section.wom
+  const femaleR = document.querySelector("section.wom #noResult");
   const maleR = document.querySelector("section.men #noResult"); 
 
-   if (femaleR) { //femaleR هي عنصر HTML مش رقم، فقيمتها تكون: 
-                  //لو لقى العنصر في الصفحة
-                  //femaleR = <p id="noResult">No trainers found</p>  → truthy ✅ OR
-                  //femaleR = null  → falsy ❌ 
-      femaleR.style.display = femaleco === 0 ? "block" : "none"; //لو femaleco = 0 → أظهر الرسالة، غير كذلك أخفها
+   if (femaleR) {
+      femaleR.style.display = femaleco === 0 ? "block" : "none"; 
   }
 
 if (maleR) {
@@ -171,52 +165,41 @@ if (maleR) {
 }
 });
 
-const modal = document.getElementById("modle"); //يمسك الـ Modal كاملاً (الخلفية الداكنة + الصندوق)
-const modalPhoto = document.getElementById("photo"); //يمسك عنصر الصورة داخل الـ Modal
-const modalName = document.getElementById("name"); //يمسك عنصر الاسم داخل الـ Modal
-const modalSpecialty = document.getElementById("specialty"); //يمسك عنصر التخصص داخل الـ Modal
-const modalBio = document.getElementById("bio"); //يمسك عنصر السيرة داخل الـ Modal
-const modalSchedule = document.getElementById("schedule"); //يمسك عنصر الجدول الزمني داخل الـ Modal
-const closeBtn = document.getElementById("close");//يمسك زر الإغلاق ×
+const modal = document.getElementById("modle");
+const modalPhoto = document.getElementById("photo"); 
+const modalName = document.getElementById("name"); 
+const modalSpecialty = document.getElementById("specialty");
+const modalBio = document.getElementById("bio"); 
+const modalSchedule = document.getElementById("schedule"); 
+const closeBtn = document.getElementById("close");
  
-// Attach click to each "More details" link
-document.querySelectorAll("a#details").forEach((link, index) => { //querySelectorAll("a#details") → يجمع كل روابط "More details" في الصفحة
-                                                                  //forEach((link, index) → يمر عليها واحدة واحدة
-                                                                  //link → الرابط الحالي
-                                                                  //index → رقم ترتيبه (0، 1، 2، 3...)
-                                                                  //رابط بطاقة Bourour Abir   → index = 0
-                                                                  //رابط بطاقة Boudraa Nareman → index = 1 .......
-  link.addEventListener("click", function (e) { //لما المستخدم يضغط على هذا الرابط → نفّذ الكود داخله
-    e.preventDefault(); //preventDefault() → يمنع الرابط من التنقل لصفحة أخرى  
-                        //لأن الرابط عنده href="#" وبدونها الصفحة ترجع للأعلى
-    const trainer = trainers[index]; //يجيب بيانات المدرب من المصفوفة باستخدام نفس رقم index الترتيب 
-    //ملء الـ Modal بالبيانات
+document.querySelectorAll("a#details").forEach((link, index) => { 
+  link.addEventListener("click", function (e) { 
+    e.preventDefault(); 
+                       
+    const trainer = trainers[index];
     const card = allCards[index];
     const img = card.querySelector("img");
-    modalPhoto.src = img ? img.src : "";  //يضع صورة المدرب في عنصر الصورة
-    modalPhoto.alt = trainer.name;//يضع اسمه كنص بديل للصورة
-    modalName.textContent = trainer.name;// يكتب الاسم داخل عنصر الاسم
-    modalSpecialty.textContent = "🏅 " + trainer.specialty ; //يكتب التخصص والخبرة معاً، مثال:
-    modalBio.textContent = trainer.bio; //يكتب السيرة داخل عنصر البايو
-    modalSchedule.textContent = "🗓️ Schedule: " + trainer.schedule; //يكتب الجدول الزمني، مثال:
+    modalPhoto.src = img ? img.src : "";  
+    modalPhoto.alt = trainer.name;
+    modalName.textContent = trainer.name;
+    modalSpecialty.textContent = "🏅 " + trainer.specialty ; 
+    modalBio.textContent = trainer.bio; 
+    modalSchedule.textContent = "🗓️ Schedule: " + trainer.schedule; 
  
-    modal.style.display = "flex"; //يظهر الـ Modal عن طريق تغيير display من none إلى flex
+    modal.style.display = "flex"; 
   });
 });
 
-// Close on button click
-closeBtn.addEventListener("click", closeModal);//لما المستخدم يضغط على زر × → ينفّذ دالة closeModal مباشرة
+closeBtn.addEventListener("click", closeModal);
  
-// Close on outside click
-modal.addEventListener("click", function (e) { //يراقب أي ضغطة تحصل على عنصر modal (الخلفية الداكنة كاملة)
-  if (e.target === modal) closeModal(); //e.target → العنصر اللي ضغط عليه المستخدم بالضبط
-                                        //يسأل: هل الضغطة كانت على الخلفية الداكنة نفسها؟ لو نعم → يغلق الـ Modal
+modal.addEventListener("click", function (e) { 
+  if (e.target === modal) closeModal();
 });
  
-// Close on Escape key
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape")
-    e.preventDefault(); // ✅ يمنع الـ scroll
+    e.preventDefault(); 
     closeModal();
 });
  
